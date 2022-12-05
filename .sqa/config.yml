@@ -1,0 +1,80 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/dCache/dcache:
+      branch: master
+      repo: https://github.com/dCache/dcache
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/dCache/dcache git:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-myrtle-owl.sh
+        container: qc.acc_sleazy-ultramarine-rhinoceros
+  QC.Doc:
+    repos:
+      github.com/dCache/dcache find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-amaranth-grasshopper.sh
+        container: qc.doc_sloppy-cyan-termite
+      github.com/dCache/dcache git:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-salmon-manatee.sh
+        container: qc.doc_shaggy-chestnut-raccoon
+      github.com/dCache/dcache markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-lavender-jaguar.sh
+        container: qc.doc_lousy-beige-bulldog
+  QC.Lic:
+    repos:
+      github.com/dCache/dcache licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-ecru-buffalo.sh
+        container: qc.lic_slaphappy-cobalt-scorpion
+  QC.Met:
+    repos:
+      github.com/dCache/dcache cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-burgundy-angora.sh
+        container: qc.met_cozy-fuchsia-olm
+  QC.Sec:
+    repos:
+      github.com/dCache/dcache bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-bistre-balinese.sh
+        container: qc.sec_gamy-khaki-gibbon
+  QC.Sty:
+    repos:
+      github.com/dCache/dcache checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-scarlet-urchin.sh
+        container: qc.sty_snippy-cream-mongrel
+      github.com/dCache/dcache flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-auburn-husky.sh
+        container: qc.sty_lovely-turquoise-yak
+      github.com/dCache/dcache hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-aquamarine-budgerigar.sh
+        container: qc.sty_flimsy-azure-serval
+      github.com/dCache/dcache jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-silver-spider.sh
+        container: qc.sty_slimy-dandelion-snail
+      github.com/dCache/dcache rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-scarlet-giraffe.sh
+        container: qc.sty_squirrely-amaranth-angora
+  QC.Ver:
+    repos:
+      github.com/dCache/dcache get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-cerise-gerbil.sh
+        container: qc.ver_flimsy-gamboge-spaniel
+timeout: 1800

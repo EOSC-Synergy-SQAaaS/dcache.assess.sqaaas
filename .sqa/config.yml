@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.7
+      branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/dCache/dcache:
       branch: master
@@ -15,66 +15,66 @@ sqa_criteria:
     repos:
       github.com/dCache/dcache git:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-myrtle-owl.sh
-        container: qc.acc_sleazy-ultramarine-rhinoceros
+        - /usr/bin/env sh .sqa/script.stuffy-magnolia-wrasse.sh
+        container: qc.acc_thirsty-peach-gar
   QC.Doc:
     repos:
       github.com/dCache/dcache find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-amaranth-grasshopper.sh
-        container: qc.doc_sloppy-cyan-termite
+        - /usr/bin/env sh .sqa/script.sickly-saffron-lion.sh
+        container: qc.doc_nerdy-ochre-mammoth
       github.com/dCache/dcache git:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-salmon-manatee.sh
-        container: qc.doc_shaggy-chestnut-raccoon
+        - /usr/bin/env sh .sqa/script.cheeky-scarlet-cuscus.sh
+        container: qc.doc_frumpy-cobalt-chin
       github.com/dCache/dcache markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-lavender-jaguar.sh
-        container: qc.doc_lousy-beige-bulldog
+        - /usr/bin/env sh .sqa/script.grumpy-fuchsia-hippopotamus.sh
+        container: qc.doc_crappy-khaki-bandicoot
   QC.Lic:
     repos:
       github.com/dCache/dcache licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-ecru-buffalo.sh
-        container: qc.lic_slaphappy-cobalt-scorpion
+        - /usr/bin/env sh .sqa/script.lovely-amaranth-macaque.sh
+        container: qc.lic_lanky-saffron-jackal
   QC.Met:
     repos:
       github.com/dCache/dcache cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-burgundy-angora.sh
-        container: qc.met_cozy-fuchsia-olm
+        - /usr/bin/env sh .sqa/script.zippy-sangria-sparrow.sh
+        container: qc.met_freaky-salmon-walrus
   QC.Sec:
     repos:
       github.com/dCache/dcache bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-bistre-balinese.sh
-        container: qc.sec_gamy-khaki-gibbon
+        - /usr/bin/env sh .sqa/script.lumpy-orange-capuchin.sh
+        container: qc.sec_lanky-crimson-kakapo
   QC.Sty:
     repos:
       github.com/dCache/dcache checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-scarlet-urchin.sh
-        container: qc.sty_snippy-cream-mongrel
+        - /usr/bin/env sh .sqa/script.randy-linen-owl.sh
+        container: qc.sty_greasy-ecru-bracke
       github.com/dCache/dcache flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-auburn-husky.sh
-        container: qc.sty_lovely-turquoise-yak
+        - /usr/bin/env sh .sqa/script.ready-gamboge-grouse.sh
+        container: qc.sty_gimpy-maroon-pinscher
       github.com/dCache/dcache hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-aquamarine-budgerigar.sh
-        container: qc.sty_flimsy-azure-serval
+        - /usr/bin/env sh .sqa/script.stuffy-cardinal-capuchin.sh
+        container: qc.sty_bumpy-sapphire-crane
       github.com/dCache/dcache jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-silver-spider.sh
-        container: qc.sty_slimy-dandelion-snail
+        - /usr/bin/env sh .sqa/script.wimpy-olive-cow.sh
+        container: qc.sty_grumpy-alizarin-schnauzer
       github.com/dCache/dcache rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-scarlet-giraffe.sh
-        container: qc.sty_squirrely-amaranth-angora
+        - /usr/bin/env sh .sqa/script.seedy-cinnamon-dormouse.sh
+        container: qc.sty_dorky-denim-schnauzer
   QC.Ver:
     repos:
       github.com/dCache/dcache get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cerise-gerbil.sh
-        container: qc.ver_flimsy-gamboge-spaniel
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.boozy-white-dhole.sh
+        container: qc.ver_shaky-white-scorpion
+timeout: 5400
